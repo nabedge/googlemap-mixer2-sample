@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.mixer2.jaxb.xhtml.Div;
 import org.mixer2.jaxb.xhtml.Html;
 import org.mixer2.jaxb.xhtml.Script;
 import org.mixer2.springmvc.AbstractMixer2XhtmlView;
@@ -32,6 +31,7 @@ public class mapView extends AbstractMixer2XhtmlView {
             HttpServletRequest request, HttpServletResponse response)
             throws IOException, TagTypeUnmatchException {
         
+        @SuppressWarnings("unchecked")
         Map<String,Double> latLngMap = (Map<String,Double>) model.get("latLngMap");
 
         // load html template
